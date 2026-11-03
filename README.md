@@ -6,11 +6,16 @@ Build using g++: ``` g++ src/main.cpp src/Game.cpp src/Bricks.cpp src/Ball.cpp -
 Run using: ``` ./build/game ```   
 
 flowchart TD
-  A[Ask a Question]-->B[Do backgrounf research]
-  B-->C[form hypo]
-  C-->D[Test with experiment]
-  D-->E[analyze data]
-  E-->F[does data spport hypo]
-  F--Yes-->G[share]
-  F--No-->H[revise]
-  H-->D
+    ReadMe[ReadMe Documentation] --> Guides[Guides]
+    ReadMe --> APIRef[API Reference]
+    
+    Guides --> Editor[Editor UI]
+    Editor --> Slash[Slash Commands]
+    Slash --> Mermaid[Mermaid Diagrams]
+    Slash --> Other[Other Blocks]
+    
+    APIRef --> OpenAPI[OpenAPI Spec]
+    APIRef --> Manual[Manual Editor]
+    
+    style ReadMe fill:#f9f,stroke:#333,stroke-width:4px
+    style Mermaid fill:#bbf,stroke:#333,stroke-width:2px
